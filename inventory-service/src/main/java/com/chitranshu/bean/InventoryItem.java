@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class InventoryItem {
 	@Id
-	private Long id;
+	private long id;
     private String productCode;
-    private Integer availableQuantity ;
+    private int availableQuantity ;
 }
