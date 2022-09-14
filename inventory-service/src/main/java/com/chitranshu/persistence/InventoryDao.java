@@ -18,7 +18,7 @@ public interface InventoryDao extends JpaRepository<InventoryItem, Long> {
 	
 	@Modifying
 	@Transactional
-	@Query(name = "UPDATE InventoryItem SET availableQuantity=?2"
+	@Query(value = "UPDATE InventoryItem SET availableQuantity=?2"
 			+ " WHERE productCode=?1 ", nativeQuery = true)
 	int updateInventoryItemQuantityByProductCode(String productCode, int availableQuantity);
 }

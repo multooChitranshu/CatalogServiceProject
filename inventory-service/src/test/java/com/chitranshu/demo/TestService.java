@@ -52,7 +52,7 @@ public class TestService {
 	class TestFindByProductCode{
 		@Test
 		public void findByProductCode_T001() {
-			InventoryItem expected=new InventoryItem((long)101, "P001", 217);
+			InventoryItem expected=new InventoryItem(101, "P001", 217);
 			
 			Mockito.when(inventoryDao.findByProductCode("P001")).thenReturn(Arrays.asList(expected));
 			
