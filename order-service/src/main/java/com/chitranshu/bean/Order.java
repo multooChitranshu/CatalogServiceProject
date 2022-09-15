@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,6 @@ public class Order {
 	private long id;
 	private String customerEmail;
 	private String customerAddress;
+	@OneToMany
 	private List<OrderItem> items;
 }
